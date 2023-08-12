@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const url = 'mongodb://127.0.0.1:27017/staffList'
+const url = 'mongodb+srv://ms2803429:3011@cluster0.0aliklf.mongodb.net/staffList'
 const connection = mongoose.connect(url);
-
+const PORT = process.env.PORT || 3011
 const { Schema } = mongoose;
 
 const teamSchema = new Schema({
@@ -12,7 +12,7 @@ const teamSchema = new Schema({
   company: String,
   salary: String,
 });
-const Team = mongoose.model('staffName', teamSchema);
+const Team = mongoose.model('Newstaffatlas', teamSchema);
 
 const express = require('express')
 const cors = require('cors')
@@ -26,7 +26,7 @@ Team.find()
   }).then((data) => {
     app.get('', async (req, res) => {
       await res.send(data);
-      // console.log(data)
+      console.log(data)
     });
 
     app.post('/form-data', (req, res) => {
@@ -63,7 +63,7 @@ app.delete('/form-data', (req, res) => {
     });
 });
 
-    app.listen(3011) 
+    app.listen(PORT) 
   })
   .catch((error) => {
     console.error('Error:', error);
