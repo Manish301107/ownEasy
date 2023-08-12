@@ -1,5 +1,5 @@
 const {MongoClient} = require('mongodb')
-const url = 'mongodb://127.0.0.1:27017'
+const url = 'mongodb+srv://ms2803429:3011@cluster0.0aliklf.mongodb.net/'
 const client = new MongoClient(url)
 
 const db = 'staffList'
@@ -7,10 +7,13 @@ const db = 'staffList'
 const connect = async ()=>{
     const result =  await client.connect()
     const database = client.db(db) 
-    return database.collection('staffName')
+    const show = await database.collection('Newstaff')
+    const j = await show.find().toArray()
+    await console.log(j)
 }
+connect()
+// module.exports = connect 
 
-module.exports = connect 
 
 
 
