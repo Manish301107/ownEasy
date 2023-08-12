@@ -12,7 +12,7 @@ const teamSchema = new Schema({
   company: String,
   salary: String,
 });
-const Team = mongoose.model('Newstaffatlas', teamSchema);
+const Team = mongoose.model('newstaff', teamSchema);
 
 const express = require('express')
 const cors = require('cors')
