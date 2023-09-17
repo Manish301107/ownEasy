@@ -4,6 +4,7 @@ let url = 'https://application-1-sfmy.onrender.com/';
 // if(teamListBox.innerHTML == " "){
 //     teamListBox.innerHTML = `No Record Found!!`
 // }
+console.log("Jai Sai Baba")
 document.getElementById('deleteForm').style.display = "none"
 
 const postNewData = () => {
