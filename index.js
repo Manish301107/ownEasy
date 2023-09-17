@@ -1,5 +1,5 @@
 // let url = 'http://127.0.0.1:5500/test.js'
-let url = 'http://localhost:3011/';
+let url = 'https://application-1-sfmy.onrender.com/';
 // const teamListBox = document.getElementById('teamListBox')
 // if(teamListBox.innerHTML == " "){
 //     teamListBox.innerHTML = `No Record Found!!`
