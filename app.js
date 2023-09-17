@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const url = 'mongodb+srv://ms2803429:3011@cluster0.0aliklf.mongodb.net/staffList'
+// const url = 'mongodb+srv://ms2803429:3011@cluster0.0aliklf.mongodb.net/staffList'
+const url = "mongodb+srv://ms2803429:3011@cluster0.0aliklf.mongodb.net/?retryWrites=true&w=majority"
 const connection = mongoose.connect(url);
 const PORT = process.env.PORT || 3000
 const { Schema } = mongoose;
