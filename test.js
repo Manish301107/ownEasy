@@ -4,7 +4,13 @@ const app = express()
 const port = process.env.PORT || 5050
 const database = "mongodb+srv://manish:301107@cluster0.eh6qqeu.mongodb.net/userbase?retryWrites=true&w=majority"
 
-console.log(`mm`); 
+console.log(`All Changes are reserved || Develop By- MANISH SONI`); 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow specific headers
+  next();
+});
 mongoose.connect(database, {
   useNewUrlParser: true,
   useUnifiedTopology: true
