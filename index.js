@@ -32,21 +32,21 @@ try {
             for (let i = 0; i < length; i++) {
                 html = `<div id="teamMember" class="rounded-md py-4 px-5 w-45 m-auto mt-4 bg-gray-50 h-38 drop-shadow-xl">
       <img class="h-24 my-4 rounded-full float-right md:mx-4" src="teamPic${i}" alt="profile_photo" id="teamPic${i}">
-      <div id="name${i}"><label class="text-lg"></label><span class="text-lg text-slate-900/100 font-bold" id="teamName${i}">Naveen Bansal</span><br></div>
-      <div id="age${i}"><label class=""></label> • <span class="text-slate-900/100" id="teamAge${i}"> 24 yrs</span><br></div>
-      <div id="post${i}"><label class=""></label> • <span class="text-slate-900/100" id="teamPost${i}"> Founder & CEO </span><br></div>
-      <div id="company${i}"><label class=""></label> • <span class="text-slate-900/100" id="teamCompany${i}">Pragati.ai</span><br></div>
-      <div id="salary${i}"><label class=""></label> • ₹<span class="text-slate-900/100" id="teamSalary${i}">15,23,000 /-</span><br></div>
+      <div id="name${i}"><label class="text-lg"></label><span class="text-lg text-slate-900/100 font-bold" id="teamName${i}"></span><br></div>
+      <div id="age${i}"><label class=""></label> • <span class="text-slate-900/100" id="teamAge${i}"></span><br></div>
+      <div id="post${i}"><label class=""></label> • <span class="text-slate-900/100" id="teamPost${i}"></span><br></div>
+      <div id="company${i}"><label class=""></label> • <span class="text-slate-900/100" id="teamCompany${i}"></span><br></div>
+      <div id="salary${i}"><label class=""></label> • ₹<span class="text-slate-900/100" id="teamSalary${i}"></span><br></div>
     </div>`
                 document.getElementById('teamListBox').innerHTML += html
 
 
                 document.getElementById(`teamPic${i}`).src = data[i].imgUrl
                 document.getElementById(`teamName${i}`).innerHTML = data[i].name
-                document.getElementById(`teamAge${i}`).innerHTML = data[i].age
+                document.getElementById(`teamAge${i}`).innerHTML = data[i].age + " yrs"
                 document.getElementById(`teamPost${i}`).innerHTML = data[i].post
                 document.getElementById(`teamCompany${i}`).innerHTML = data[i].company
-                document.getElementById(`teamSalary${i}`).innerHTML = data[i].salary
+                document.getElementById(`teamSalary${i}`).innerHTML = data[i].salary + "/-"
 
                 if (data[i].salary == undefined) {
                     document.getElementById(`salary${i}`).innerHTML = ""
