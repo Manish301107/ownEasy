@@ -1,9 +1,6 @@
 // let url = 'http://127.0.0.1:5500/test.js'
 let url = 'https://test-001-8831.onrender.com/';
-// const teamListBox = document.getElementById('teamListBox')
-// if(teamListBox.innerHTML == " "){
-//     teamListBox.innerHTML = `No Record Found!!`
-// }
+     
 console.log("Jai Sai Baba")
 document.getElementById('deleteForm').style.display = "none"
 
@@ -18,11 +15,16 @@ const deleteData = () => {
 }
 
 try {
-    fetch(url)
+     fetch(url)
         .then((response) => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Network is not responding 😭');
+            } else if(response.status == 200) {
+                console.log('Server Connected Succesfully!! 😃');
+                document.querySelector('#load').style.display="none"
+                document.getElementById("teamListBox").style.backgroundColor="lightgray"
             }
+            
             return response.json(); 
         })
         .then((data) => {
@@ -60,10 +62,12 @@ try {
                     document.getElementById(`name${i}`).innerHTML = ""
                 }
 
-            }
+            }  
         })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Eriror:', error);
+            document.querySelector('#fetchError').style.display="block"
+            document.querySelector('#load').style.display="none"
         });
 
 } catch (err) {
