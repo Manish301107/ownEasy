@@ -3,11 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>
   <link href="/dist/output.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+    body {
+      font-family: 'Mooli', sans-serif;
+      padding: 0;
+      margin:0;
+      background: url(9627588_8718.jpg) no-repeat;
+      background-size: 100% 30%;
+    }
     .w-45 {
       width: 47%;
+    }
+    #teamList {
+      font-size: 60px;
+      font-weight: 1000;
+      background: url(https://static.vecteezy.com/system/resources/thumbnails/020/933/072/small/abstract-blur-gradient-background-vector.jpg);
+      background-size: 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
   </style>
 </head>
@@ -123,11 +142,18 @@
       </div>
     </div>
   </nav>
-  <header>
-    <h2 class="text-4xl p-5 text-center my-16" id="teamList">Our Team</h2>
-  </header>
-  <section class="w-11/12 py-6 py-auto bg-gray-200 mx-auto mb-16 rounded-md flex flex-wrap" id="teamListBox">
 
+  
+  <header>
+    <h2 class="text-4xxl p-8 text-center my-24" id="teamList">Our Team</h2>
+  </header>
+  <section class="w-11/12 py-6 py-auto mx-auto mb-16 rounded-md flex flex-wrap" style="background-color: white; background: url(5334284.jpg) no-repeat" id="teamListBox">
+    <!-- <img src="https://i.giphy.com/media/ZO9b1ntYVJmjZlsWlm/giphy.webp" id="load" style='display:block; height:10vw;' class="mx-auto"></img> -->
+    <img src="1000002258-unscreen.gif" id="load" style='display:block; height:10vw;' class="mx-auto"></img>
+    <div class="mx-auto" style ="display: none;" id="fetchError">
+       <span class="inline-flex items-center rounded-md bg-pink-50 px-5 py-3 text-xs font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 ">Server Connection Error</span>
+    </div>
+    
   </section>
 
 
@@ -278,4 +304,4 @@
   <script type="text/javascript" src="index.js"></script>
 </body>
 
-</html>
+  </html>
